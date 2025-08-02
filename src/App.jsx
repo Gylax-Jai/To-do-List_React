@@ -10,7 +10,7 @@ function App() {
     <>
    <Navbar/>
   
-   <div className='  my-4 rounded-2xl p-5  w-[50%]  mx-auto bg-violet-100 min-h-[80vh]'>
+   <div className=' my-4 rounded-2xl py-5  px-10 w-[60%]  mx-auto bg-violet-100 min-h-[80vh]'>
    <Todoapp/>
    </div>
    <Footer/>
