@@ -98,7 +98,7 @@ const Todoapp = () => {
             </div>
 
             <div
-                className={`text w-full md:w-[400px] break-all  py-1 px-4 min-w-[200px] border-1 border-gray-400 capitalize bg-white text-black rounded-full ${
+                className={`text w-full md:w-[400px] break-all  py-1 px-4 min-w-[150px] border-1 border-gray-400 capitalize bg-white text-black rounded-full ${
                     item.isCompleted ? "line-through" : ""
                 }`}
             >
