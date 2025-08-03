@@ -4,3 +4,8 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
+
+.red{
+/* text-decoration: underline; */
+color: rgb(205, 7, 205);
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'  
+import { NavLink } from 'react-router-dom'  
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -31,15 +32,15 @@ const Navbar = () => {
                 <div className="hidden md:block">
                     <ul className='flex gap-10 list-none text-lg font-semibold'>
                         <li className='cursor-pointer hover:scale-[1.08] hover:text-black transition-all relative'>
-                            <Link to="/">HOME</Link>  {/* ✅ Step 2: Use Link instead of <a> */}
+                            <NavLink className={(e)=>{return e.isActive?"red":""}} to="/">HOME</NavLink>  {/* ✅ Step 2: Use Link instead of <a> */}
                             <div className="underline-line"></div>
                         </li>
                         <li className='cursor-pointer hover:scale-[1.08] hover:text-black transition-all relative'>
-                            <Link to="/about">ABOUT</Link>
+                            <NavLink className={(e)=>{return e.isActive?"red":""}} to="/about">ABOUT</NavLink>
                             <div className="underline-line"></div>
                         </li>
                         <li className='cursor-pointer hover:scale-[1.08] hover:text-black transition-all relative'>
-                            <Link to="/contact">CONTACT US</Link>
+                            <NavLink className={(e)=>{return e.isActive?"red":""}} to="/contact">CONTACT US</NavLink>
                             <div className="underline-line"></div>
                         </li>
                     </ul>
@@ -49,9 +50,9 @@ const Navbar = () => {
                 {menuOpen && (
                     <div className="absolute top-full left-0 w-full bg-emerald-600 shadow-lg md:hidden z-50">
                         <ul className='flex flex-col gap-4 p-4 text-lg font-semibold'>
-                            <li className='cursor-pointer hover:text-black'><Link to="/">HOME</Link></li>
-                            <li className='cursor-pointer hover:text-black'><Link to="/about">ABOUT</Link></li>
-                            <li className='cursor-pointer hover:text-black'><Link to="/contact">CONTACT US</Link></li>
+                            <li className='cursor-pointer hover:text-black'><NavLink className={(e)=>{return e.isActive?"red":""}} to="/">HOME</NavLink></li>
+                            <li className='cursor-pointer hover:text-black'><NavLink className={(e)=>{return e.isActive?"red":""}} to="/about">ABOUT</NavLink></li>
+                            <li className='cursor-pointer hover:text-black'><NavLink className={(e)=>{return e.isActive?"red":""}} to="/contact">CONTACT US</NavLink></li>
                         </ul>
                     </div>
                 )}
